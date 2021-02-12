@@ -1,3 +1,8 @@
+/**
+ * @file p3_act3.cpp
+ * @brief Ejemplo de String
+ */
+
 #include<iostream>
 #include<string>
 
