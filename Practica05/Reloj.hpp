@@ -82,19 +82,19 @@ namespace dfb
 
         /**
          * @brief Devuelve la hora del reloj
-         * @return hora, entero que representa la hora de 0 a 23
+         * @return hora, entero entre 0 y 23 que representa la hora
          */
         int GetHora();
 
         /**
          * @brief Devuelve los minutos del reloj
-         * @return minutos, entero que representa los minutos entre 0 y 59
+         * @return minutos, entero entre 0 y 59 que representa los minutos
          */
         int GetMin();
 
         /**
          * @brief Devuelve los segundos del reloj
-         * @return segundos, entero que representa los segundos entre 0 y 59
+         * @return segundos, entero entre 0 y 59 que representa los segundos
          */
         int GetSeg();
 
