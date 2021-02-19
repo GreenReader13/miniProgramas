@@ -93,17 +93,51 @@ namespace dfb
         mesf = static_cast<int>(f.mes);
 
         if(f.anio > this->anio) return true;
-        if(f.anio == this->anio){
-            if(mesf > mes) return true;
-            if(mesf == mes && f.dia > this->dia) return true;
-        }
-
-        return false;
+        if(f.anio < this->anio) return false;
+        if(mesf > mes) return true;
+        if(mesf < mes) return false;
+        return f.dia > this->dia;
     }
 
     bool Fecha::Menor(const Fecha & f)
     {
         return !(this->Igual(f) || this->Mayor(f));
+    }
+
+    bool Fecha::Bisiesto()
+    {
+        int a = this->anio;
+        return (a % 4 == 0 && (a % 100 != 0 || a % 400 == 0));
+    }
+
+    bool Fecha::operator>(const Fecha & f)
+    {
+        return this->Mayor(f);
+    }
+
+    bool Fecha::operator<(const Fecha & f)
+    {
+        return this->Menor(f);
+    }
+
+    bool Fecha::operator>=(const Fecha & f)
+    {
+        return (this->Mayor(f) || this->Igual(f));
+    }
+
+    bool Fecha::operator<=(const Fecha & f)
+    {
+        return !this->Mayor(f);
+    }
+
+    bool Fecha::operator==(const Fecha & f)
+    {
+        return this->Igual(f);
+    }
+
+    bool Fecha::operator!=(const Fecha & f)
+    {
+        return !this->Igual(f);
     }
 
 }
