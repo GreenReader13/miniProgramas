@@ -3,10 +3,11 @@
 
 namespace dfb
 {
-    Empleado::Empleado( std::string, std::string, dfb::Fecha, dfb::Puesto):
-	                    nombre{nombre}, direccion{direccion},
-                        contratacion{contratacion}, puesto{puesto},
-                        diasTrabajados{0},penalizacion{0}
+    Empleado::Empleado(	std::string n, std::string d, dfb::Fecha c, 
+						dfb::Puesto p):
+							nombre{n}, direccion{d},
+							contratacion{c}, puesto{p},
+							diasTrabajados{0},penalizacion{0}
 	{
 		if(puesto==dfb::Puesto(1)) this->sueldoBase = 7000.0;
 		if(puesto==dfb::Puesto(2)) this->sueldoBase = 3000.0;

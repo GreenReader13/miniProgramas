@@ -48,12 +48,15 @@ namespace dfb
         if(m > 0 && m <=12)
         {
             this->mes = Meses(m -1);
+            return true;
         }
+        return false;
     }
 
     bool Fecha::setA(int a)
     {
         this->anio = a;
+        return true;
     }
 
 	void Fecha::getDia(){

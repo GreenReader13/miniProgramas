@@ -3,11 +3,6 @@
 
 namespace dfb
 {
-    Reloj::Reloj():hora(0), min(0), seg(0)
-    {
-
-    }
-
     Reloj::Reloj(int h, int m, int s)
     {
         this->Establecer(h, m, s);
