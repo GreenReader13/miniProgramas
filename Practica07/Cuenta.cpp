@@ -55,7 +55,7 @@ bool Cuenta::Abonar(double cantidad)
 
 bool Cuenta::Cargar(double cantidad)
 {
-    if(cantidad <= 0 || this->saldo < cantidad) return false;
+    if(cantidad <= 0 || this->saldo < (cantidad + this->montoMinimo)) return false;
 
     const double cantidadAct = this->saldo;
     const double cantidadTot = cantidadAct - cantidad;
