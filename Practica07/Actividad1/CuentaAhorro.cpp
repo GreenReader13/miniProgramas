@@ -28,3 +28,8 @@ double CuentaAhorro::CalcularInteres()
 {
     return this->interes * GetSaldo();
 }
+
+CuentaAhorro::~CuentaAhorro()
+{
+    
+}

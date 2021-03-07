@@ -70,3 +70,8 @@ bool CuentaCheques::Cargar(double cantidad)
         return false;
     }
 }
+
+CuentaCheques::~CuentaCheques()
+{
+    
+}

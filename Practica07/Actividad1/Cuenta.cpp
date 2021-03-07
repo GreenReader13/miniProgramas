@@ -120,6 +120,7 @@ bool Cuenta::SetPassword(std::string pass)
     //Implementar cifrado
     const std::string passCifrada = pass;
     this->password = passCifrada;
+    return true;
 }
 
 bool Cuenta::Autenticar(std::string cuenta, std::string pass)
@@ -130,6 +131,7 @@ bool Cuenta::Autenticar(std::string cuenta, std::string pass)
         std::string passDes = this->password;
         return pass.compare(passDes) == 0;
     }
+    return false;
 }
 
 void Cuenta::Guardar()
@@ -140,9 +142,16 @@ void Cuenta::Guardar()
 std::string Cuenta::Desencriptar(std::string pass, std::string llave)
 {
     //Implementar
+    return pass;
 }
 
 std::string Cuenta::Encriptar(std::string pass, std::string llave)
 {
     //implementar
+    return pass;
+}
+
+Cuenta::~Cuenta()
+{
+    
 }
